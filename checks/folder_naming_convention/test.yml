@@ -1,0 +1,26 @@
+test_id: T01
+test_name: Folder Naming Convention
+test_version: 1.0.0
+description: Checks whether folders containing in-scope files follow the configured naming convention.
+entrypoint: T01_folder_naming_convention.py
+severity: Medium
+confidence: Certain
+category: Naming Convention
+supported_extensions:
+  - "*"
+timeout_seconds: 120
+enabled_by_default: true
+parameters:
+  style: snake_case
+  custom_pattern: null
+  allow_leading_number: true
+  ignored_folder_names:
+    - .git
+    - .github
+    - .venv
+    - venv
+    - __pycache__
+    - node_modules
+    - .idea
+    - .vscode
+  allowed_folder_names: []
