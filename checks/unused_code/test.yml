@@ -1,0 +1,27 @@
+test_id: T06
+test_name: Unused Code, Dead SQL and Orphan Object Analysis
+test_version: 1.0.0
+description: Finds unused Python imports, unreferenced functions, unreachable statements, unused or pass-through
+  SQL CTEs and files not referenced by any orchestration configuration. %run helpers, decorated functions and dbt
+  models are not flagged.
+entrypoint: T06_unused_code.py
+severity: Low
+confidence: Likely
+category: Maintainability
+platforms:
+- databricks
+- fabric
+- snowflake
+supported_extensions:
+- .py
+- .ipynb
+- .sql
+- .yml
+- .yaml
+- .json
+- .toml
+timeout_seconds: 600
+enabled_by_default: true
+parameters:
+  exclude_folders: []
+  exclude_files: []

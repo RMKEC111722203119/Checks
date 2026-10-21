@@ -1,0 +1,25 @@
+test_id: T11
+test_name: Bronze Metadata and Audit Column Validation
+test_version: 1.0.0
+description: Checks each bronze target for audit columns (load timestamp, source system, batch id) and recommended
+  lineage columns. Evidence is combined across DDL, INSERT/COPY/MERGE and PySpark/Snowpark code, and common aliases
+  (load_ts, ingested_at, run_id, METADATA$FILENAME ...) are accepted.
+entrypoint: T11_bronze_metadata.py
+severity: High
+confidence: Likely
+category: Auditability
+platforms:
+- databricks
+- fabric
+- snowflake
+supported_extensions:
+- .sql
+- .py
+- .ipynb
+- .scala
+timeout_seconds: 240
+enabled_by_default: true
+parameters:
+  exclude_folders: []
+  exclude_files: []
+  audit_columns: []

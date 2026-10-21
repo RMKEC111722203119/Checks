@@ -1,0 +1,20 @@
+test_id: T23
+test_name: CI/CD Quality Gate Validation
+test_version: 1.0.0
+description: Inventories GitHub Actions, Azure DevOps, GitLab, Bitbucket, Jenkins and similar pipelines and checks
+  for secret scanning, linting, tests and other quality gates, plus approval before production deployment.
+entrypoint: T23_cicd_quality_gates.py
+severity: Medium
+confidence: Likely
+category: Delivery Governance
+platforms:
+- databricks
+- fabric
+- snowflake
+supported_extensions:
+- '*'
+timeout_seconds: 120
+enabled_by_default: true
+parameters:
+  exclude_folders: []
+  exclude_files: []

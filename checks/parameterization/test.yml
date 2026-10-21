@@ -1,0 +1,24 @@
+test_id: T18
+test_name: Notebook and Script Parameterization
+test_version: 1.0.0
+description: Checks Databricks, Fabric and Jupyter notebooks and pipeline scripts for runtime parameters and flags
+  hardcoded dates/environments, manual-edit instructions and notebooks writing several layers. Notebook parameter
+  cells are treated as intended defaults.
+entrypoint: T18_parameterization.py
+severity: Medium
+confidence: Likely
+category: Reusability
+platforms:
+- databricks
+- fabric
+- snowflake
+supported_extensions:
+- .ipynb
+- .py
+- .scala
+- .r
+timeout_seconds: 240
+enabled_by_default: true
+parameters:
+  exclude_folders: []
+  exclude_files: []

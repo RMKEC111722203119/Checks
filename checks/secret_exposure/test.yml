@@ -1,0 +1,21 @@
+test_id: T01
+test_name: Secret, Credential, API Key and Token Exposure
+test_version: 1.0.0
+description: 'Finds committed secrets: provider keys and tokens, private keys, credentials in URLs and connection
+  strings, credential assignments and high-entropy strings. Evidence is masked; secret-store lookups and placeholders
+  are not reported.'
+entrypoint: T01_secret_exposure.py
+severity: Critical
+confidence: Likely
+category: Security
+platforms:
+- databricks
+- fabric
+- snowflake
+supported_extensions:
+- '*'
+timeout_seconds: 300
+enabled_by_default: true
+parameters:
+  exclude_folders: []
+  exclude_files: []

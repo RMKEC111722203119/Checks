@@ -1,0 +1,28 @@
+test_id: T04
+test_name: Environment, Catalog, Schema and Object Hardcoding
+test_version: 1.0.0
+description: Finds objects hardcoded to dev/test/prod catalogs, databases, schemas or warehouses, literal USE statements,
+  cross-environment reads/writes and workspace/account URLs. Parameterized references and notebook parameter cells
+  are accepted.
+entrypoint: T04_environment_hardcoding.py
+severity: High
+confidence: Likely
+category: Portability
+platforms:
+- databricks
+- fabric
+- snowflake
+supported_extensions:
+- .sql
+- .py
+- .ipynb
+- .scala
+- .r
+- .yml
+- .yaml
+- .json
+timeout_seconds: 240
+enabled_by_default: true
+parameters:
+  exclude_folders: []
+  exclude_files: []

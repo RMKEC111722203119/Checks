@@ -1,0 +1,21 @@
+test_id: T24
+test_name: Dependency and Library Management
+test_version: 1.0.0
+description: Reads requirements, pyproject, setup, Pipfile and conda/Fabric/Snowpark environment files and flags
+  missing dependency files, unpinned or conflicting versions, notebook runtime installs and undeclared imports.
+  Runtime-provided modules (pyspark, delta, dbutils, notebookutils, snowflake ...) are ignored.
+entrypoint: T24_dependency_management.py
+severity: Medium
+confidence: Likely
+category: Reproducibility
+platforms:
+- databricks
+- fabric
+- snowflake
+supported_extensions:
+- '*'
+timeout_seconds: 240
+enabled_by_default: true
+parameters:
+  exclude_folders: []
+  exclude_files: []

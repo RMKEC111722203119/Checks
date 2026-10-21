@@ -1,0 +1,24 @@
+test_id: T07
+test_name: Duplicate Code Detection
+test_version: 1.0.0
+description: Finds duplicated blocks across SQL, Python, Scala and notebook cells after removing comments, whitespace,
+  SQL casing and literal values. Reports both locations, size and line ranges.
+entrypoint: T07_duplicate_code.py
+severity: Medium
+confidence: Certain
+category: Maintainability
+platforms:
+- databricks
+- fabric
+- snowflake
+supported_extensions:
+- .py
+- .ipynb
+- .sql
+- .scala
+- .r
+timeout_seconds: 600
+enabled_by_default: true
+parameters:
+  exclude_folders: []
+  exclude_files: []

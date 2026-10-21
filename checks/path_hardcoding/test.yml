@@ -1,0 +1,22 @@
+test_id: T05
+test_name: Hardcoded Path and Storage Location Exposure
+test_version: 1.0.0
+description: Finds hardcoded local, personal workspace, DBFS, mount, cloud storage (ADLS/S3/GCS), OneLake and file
+  URLs. Parameterized paths and Fabric /lakehouse/default paths are accepted; documentation and comments are reported
+  at Low.
+entrypoint: T05_path_hardcoding.py
+severity: Medium
+confidence: Likely
+category: Portability
+platforms:
+- databricks
+- fabric
+- snowflake
+supported_extensions:
+- '*'
+timeout_seconds: 240
+enabled_by_default: true
+parameters:
+  exclude_folders: []
+  exclude_files: []
+  approved_paths: []

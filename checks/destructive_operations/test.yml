@@ -1,0 +1,26 @@
+test_id: T15
+test_name: Dangerous Overwrite, Delete and Destructive Operations
+test_version: 1.0.0
+description: Finds DROP, TRUNCATE, DELETE without WHERE, INSERT OVERWRITE, CREATE OR REPLACE TABLE, REPLACE WHERE,
+  partition/column drops, short VACUUM retention, overwrite modes and recursive deletes. Production/curated/raw
+  targets raise severity; temporary targets, guardrails and reset/test folders lower it.
+entrypoint: T15_destructive_operations.py
+severity: High
+confidence: Likely
+category: Operational Risk
+platforms:
+- databricks
+- fabric
+- snowflake
+supported_extensions:
+- .sql
+- .py
+- .ipynb
+- .scala
+- .r
+- .sh
+timeout_seconds: 240
+enabled_by_default: true
+parameters:
+  exclude_folders: []
+  exclude_files: []

@@ -1,0 +1,25 @@
+test_id: T08
+test_name: Code Complexity and Maintainability
+test_version: 1.0.0
+description: Measures Python complexity, length, parameters and nesting; SQL joins, CTEs, subquery depth, CASE,
+  windows and unions per statement; notebook cell count, cell size, language and layer mixing. Values at twice the
+  threshold are High.
+entrypoint: T08_code_complexity.py
+severity: Medium
+confidence: Certain
+category: Maintainability
+platforms:
+- databricks
+- fabric
+- snowflake
+supported_extensions:
+- .py
+- .ipynb
+- .sql
+- .scala
+- .r
+timeout_seconds: 300
+enabled_by_default: true
+parameters:
+  exclude_folders: []
+  exclude_files: []

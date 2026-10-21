@@ -1,0 +1,21 @@
+test_id: T03
+test_name: Naming Convention Compliance
+test_version: 1.0.0
+description: Checks snake_case naming of folders, code files, Python functions and SQL objects, PascalCase classes,
+  and weak names such as copy/final/backup. Hidden files (.env, .gitignore), standard project files and Fabric item
+  suffixes are handled automatically.
+entrypoint: T03_naming_convention.py
+severity: Medium
+confidence: Certain
+category: Maintainability
+platforms:
+- databricks
+- fabric
+- snowflake
+supported_extensions:
+- '*'
+timeout_seconds: 180
+enabled_by_default: true
+parameters:
+  exclude_folders: []
+  exclude_files: []

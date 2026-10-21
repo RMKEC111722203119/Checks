@@ -1,0 +1,23 @@
+test_id: T12
+test_name: Silver Layer Transformation Quality
+test_version: 1.0.0
+description: Checks silver/cleansed/staging assets, including dbt models, for SELECT * pass-through, missing cleansing
+  logic and missing deduplication around key columns.
+entrypoint: T12_silver_quality.py
+severity: Medium
+confidence: Likely
+category: Data Quality
+platforms:
+- databricks
+- fabric
+- snowflake
+supported_extensions:
+- .sql
+- .py
+- .ipynb
+- .scala
+timeout_seconds: 240
+enabled_by_default: true
+parameters:
+  exclude_folders: []
+  exclude_files: []

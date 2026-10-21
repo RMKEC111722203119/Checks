@@ -1,0 +1,24 @@
+test_id: T10
+test_name: Bronze Layer Architecture Validation
+test_version: 1.0.0
+description: Bronze/raw/landing assets must stay ingestion-only. Flags joins, deduplication, window functions, aggregations,
+  business metrics and destructive writes, and reports a purity level.
+entrypoint: T10_bronze_architecture.py
+severity: High
+confidence: Likely
+category: Architecture
+platforms:
+- databricks
+- fabric
+- snowflake
+supported_extensions:
+- .sql
+- .py
+- .ipynb
+- .scala
+- .r
+timeout_seconds: 240
+enabled_by_default: true
+parameters:
+  exclude_folders: []
+  exclude_files: []

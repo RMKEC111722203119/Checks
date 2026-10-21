@@ -1,0 +1,24 @@
+test_id: T09
+test_name: SQL Dependency, Lineage and Layer Violation
+test_version: 1.0.0
+description: Builds a static read/write map from SQL, PySpark, Snowpark and dbt ref()/source() and reports reverse
+  medallion flow, skipped layers, cross-environment dependencies, cycles and unused intermediate outputs.
+entrypoint: T09_lineage_layer_violation.py
+severity: High
+confidence: Likely
+category: Architecture
+platforms:
+- databricks
+- fabric
+- snowflake
+supported_extensions:
+- .sql
+- .py
+- .ipynb
+- .scala
+- .r
+timeout_seconds: 300
+enabled_by_default: true
+parameters:
+  exclude_folders: []
+  exclude_files: []

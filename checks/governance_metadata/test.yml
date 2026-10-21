@@ -1,0 +1,25 @@
+test_id: T27
+test_name: Table, Column Comments and Governance Metadata
+test_version: 1.0.0
+description: Checks gold/production DDL for table comments and for governance treatment (comment, tag, mask, row
+  filter/access policy, dynamic data masking) on PII-like columns. Accepts Databricks, Snowflake and Fabric syntax,
+  COMMENT ON/ALTER statements and dbt YAML descriptions. Findings are Low/Medium.
+entrypoint: T27_governance_metadata.py
+severity: Low
+confidence: Possible
+category: Governance
+platforms:
+- databricks
+- fabric
+- snowflake
+supported_extensions:
+- .sql
+- .py
+- .ipynb
+- .yml
+- .yaml
+timeout_seconds: 180
+enabled_by_default: false
+parameters:
+  exclude_folders: []
+  exclude_files: []

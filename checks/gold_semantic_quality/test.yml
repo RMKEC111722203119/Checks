@@ -1,0 +1,26 @@
+test_id: T13
+test_name: Gold Layer Business Metric and Semantic Quality
+test_version: 1.0.0
+description: Checks gold/mart/fact/dim/reporting assets, including dbt models, for a final SELECT *, direct bronze
+  reads, undocumented metrics, hardcoded business constants and missing grain documentation.
+entrypoint: T13_gold_semantic_quality.py
+severity: Medium
+confidence: Likely
+category: Semantic Quality
+platforms:
+- databricks
+- fabric
+- snowflake
+supported_extensions:
+- .sql
+- .py
+- .ipynb
+- .scala
+- .md
+- .yml
+- .yaml
+timeout_seconds: 240
+enabled_by_default: true
+parameters:
+  exclude_folders: []
+  exclude_files: []
