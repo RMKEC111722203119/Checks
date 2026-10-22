@@ -4,7 +4,7 @@ test_version: 1.0.0
 description: Finds committed personal and financial values (email, phone, national IDs, IBAN, cards, DOB), sensitive
   column names and confidentiality markers. Notebook outputs and data files rate highest.
 entrypoint: T02_sensitive_data_exposure.py
-severity: High
+severity: low
 confidence: Likely
 category: Data Protection
 platforms:
